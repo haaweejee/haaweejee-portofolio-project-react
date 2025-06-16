@@ -6,16 +6,16 @@ import './SocialMedia.css';
 
 const SocialMedia = () => (
   <div className="social-media">
-    <a href="https://github.com/username" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/haaweejee" target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={faGithub} size="2x" />
     </a>
-    <a href="https://www.upwork.com/freelancers/~username" target="_blank" rel="noopener noreferrer">
+    {/* <a href="https://www.upwork.com/freelancers/~username" target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={faUpwork} size="2x" />
     </a>
     <a href="https://medium.com/@username" target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={faMedium} size="2x" />
-    </a>
-    <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer">
+    </a> */}
+    <a href="https://linkedin.com/in/haaweejee" target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={faLinkedin} size="2x" />
     </a>
   </div>

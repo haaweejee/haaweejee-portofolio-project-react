@@ -2,7 +2,7 @@ import React from 'react';
 import './ContactMe.css';
 
 const ContactMe = () => (
-  <section className="contactme-section">
+  <section id='contact' className="contactme-section">
     <div className="contactme-container">
       <img
         src="/profile.jpg"
@@ -17,10 +17,10 @@ const ContactMe = () => (
             using Flutter. Dedicated to delivering seamless user experiences and writing clean, maintainable code.      
         </p>
       <div className="contactme-actions">
-        <a href="mailto:your.email@example.com" className="contactme-btn contactme-btn-purple">
+        <a href="https://www.linkedin.com/in/haaweejee/" className="contactme-btn contactme-btn-purple">
           Let&apos;s Connect <span className="contactme-btn-arrow">→</span>
         </a>
-        <a href="https://wa.me/yourphonenumber" className="contactme-btn contactme-btn-green">
+        <a href="https://wa.me/6282217106768" className="contactme-btn contactme-btn-green">
           Let&apos;s Chat <span className="contactme-btn-arrow">→</span>
         </a>
       </div>

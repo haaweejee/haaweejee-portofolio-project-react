@@ -77,7 +77,7 @@ const projectList = [
 const ProjectHistory = () => {
     
     return (
-    <section className="experience">
+    <section id='projects' className="experience">
         <h2 className="experience-subtitle">Case Studies</h2>
         <h1 className="experience-title">Project History</h1>
         <div className="experience-underline"></div>
