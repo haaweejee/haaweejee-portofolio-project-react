@@ -1,0 +1,132 @@
+.experience {
+  margin: 200px auto;
+  max-width: 1100px;
+  padding: 0 16px;
+  
+}
+
+.experience-subtitle {
+  color: #3498db;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  max-width: 1100px;
+  text-align: center;
+  color: #333;
+}
+
+.experience-notes {
+  font-size: 0.7rem;
+  margin: 0;
+  font-weight: 400;
+  color: #666;
+  margin-top: 12px;
+}
+
+.experience-underline {
+  width: 120px;
+  height: 4px;
+  background: #3498db;
+  margin: 16px auto 32px auto; /* Biar underline juga di tengah */
+  border-radius: 2px;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-row {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+}
+
+.experience-details {
+  background: #3498db;
+  color: #fff;
+  padding: 32px 24px;
+  border-radius: 2px;
+  flex: 1.2;
+  font-size: 1.1rem;
+  margin-top: 48px;
+}
+
+.experience-details ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-timeline-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  position: relative;
+}
+
+.experience-circle {
+  background: #3498db;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+  z-index: 2;
+  position: relative;
+}
+
+.experience-line {
+  width: 4px;
+  background: #3498db;
+  z-index: 1;
+}
+
+.experience-line-top {
+  height: 50%;
+  margin-bottom: -2px; /* agar menempel ke lingkaran */
+}
+
+.experience-line-bottom {
+  height: 50%;
+  margin-top: -2px; /* agar menempel ke lingkaran */
+}
+
+.experience-info {
+  flex: 1.5;
+  padding: 16px 0 0 0;
+}
+
+.experience-info h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.experience-date {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.experience-logo {
+  height: 32px;
+  margin-top: 8px;
+}
