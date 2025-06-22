@@ -14,8 +14,8 @@ const projectList = [
       'Developed and implemented new features by slicing designs from Figma into code',
     ],
     tech: [
-      'Kotlin', 'Android', 'Retrofit', 'Firebase', 'MVVM', 'Clean Architecture',
-      'Room', 'Jetpack Compose', 'DataStore', 'JUnit', 'Mockito', 'Modularization', 'Dagger Hilt'
+      'Kotlin', 'Android', 'MVVM', 'Clean Architecture',
+      'Jetpack Compose'
     ]
   },
   {
@@ -23,13 +23,11 @@ const projectList = [
     title: 'Dunia Games (Android)',
     desc: 'An application that serves as the largest gaming portal in Indonesia, featuring articles, community, short videos, tournaments, livestreams, and top-up services.',
     features: [
-      'Ensured a Crash-Free Percentage above 99% using Firebase Crashlytics to maintain app stability and performance.',
       'Migrate From MVP to MVVM, Xml View to Jetpack Compose',
-      'Implement Firebase Monitoring to Monitor Network Request.'
     ],
     tech: [
-      'Kotlin', 'Java', 'Android', 'Retrofit', 'Firebase', 'MVVM', 'Clean Architecture',
-      'Room', 'Jetpack Compose', 'DataStore', 'JUnit', 'Mockito', 'Modularization', 'KTOR', 'Dagger 2'
+      'Kotlin', 'Java', 'Android', 'MVVM', 'Clean Architecture',
+      'Room', 'Jetpack Compose', 'DataStore', 'Modularization'
     ]
   },
   {
