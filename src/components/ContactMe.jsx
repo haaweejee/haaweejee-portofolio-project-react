@@ -1,27 +1,25 @@
 import React from 'react';
-import './ContactMe.css';
 
 const ContactMe = () => (
-  <section id='contact' className="contactme-section">
-    <div className="contactme-container">
+  <section id='contact' className="py-[60px] pb-[80px] flex justify-center">
+    <div className="max-w-[900px] mx-auto text-center">
       <img
         src="/profile.jpg"
         alt="Profile"
-        className="contactme-avatar"
-      />
-      <p className="contactme-desc">
+        className="w-[150px] h-[150px] rounded-full object-cover mb-6 items-center justify-center mx-auto"/>
+      <p className="text-[1.2rem] mb-9 text-[#333] leading-[1.6]">
             Android Developer with 3+ years of experience in mobile app development, specializing in building high-quality,
             scalable applications. Currently working at Salt Indonesia as an Android Developer, where I contributed to the
             development of the Dunia Games Android application by Telkomsel. Passionate about mobile development, with
             expertise in native Android development (Kotlin, Jetpack Compose) and experience in hybrid app development
             using Flutter. Dedicated to delivering seamless user experiences and writing clean, maintainable code.      
         </p>
-      <div className="contactme-actions">
-        <a href="https://www.linkedin.com/in/haaweejee/" className="contactme-btn contactme-btn-purple">
-          Let&apos;s Connect <span className="contactme-btn-arrow">→</span>
+      <div className="flex flex-col sm:flex-row justify-center gap-8">
+        <a href="https://www.linkedin.com/in/haaweejee/" className="flex items-center gap-2 px-7 py-3 rounded-[32px] border border-[#888] bg-[#181818] text-white text-[1.1rem] font-medium no-underline transition-colors duration-200 hover:bg-[#3498db] hover:text-white">
+          Let&apos;s Connect <span className="text-[1.3em] ml-1.5">→</span>
         </a>
-        <a href="https://wa.me/6282217106768" className="contactme-btn contactme-btn-green">
-          Let&apos;s Chat <span className="contactme-btn-arrow">→</span>
+        <a href="https://wa.me/6282217106768" className="flex items-center gap-2 px-7 py-3 rounded-[32px] border border-[#888] bg-[#181818] text-white text-[1.1rem] font-medium no-underline transition-colors duration-200 hover:bg-[#3498db] hover:text-white">
+          Let&apos;s Chat <span className="text-[1.3em] ml-1.5">→</span>
         </a>
       </div>
     </div>

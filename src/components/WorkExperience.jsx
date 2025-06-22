@@ -1,9 +1,10 @@
 import React from 'react';
-import './WorkExperience.css';
+// import './WorkExperience.css';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { Slide } from 'react-awesome-reveal';
 
 const experiences = [
   {
@@ -58,10 +59,12 @@ const experiences = [
 ];
 
 const WorkExperience = () => (
-  <section id='experience' className="experience">
-    <h2 className="experience-subtitle">Experience</h2>
-    <h1 className="experience-title">Work Experience</h1>
-    <div className="experience-underline"></div>
+  <section id='experience' className="mx-auto my-[200px] max-w-[1100px] px-4">
+    <Slide>
+      <h2 className="text-[#3498db] md:text-2xl text-xl font-normal mb-0 max-w-[1100px] text-center">Experience</h2>
+      <h1 className="md:text-3xl text-2xl font-bold m-0 max-w-[1100px] text-center text-[#333]">Work Experience</h1>
+      <div className="w-[120px] h-1 bg-[#3498db] my-4 mx-auto rounded"></div>
+    </Slide>
     <VerticalTimeline
       lineColor="#3498db">
         {
@@ -81,7 +84,8 @@ const WorkExperience = () => (
                 <h4 className="vertical-timeline-element-subtitle">{exp.company}</h4>
 
                 <img src={exp.logo} alt={exp.company} style={{ height: 20, margin: '12px 0' }} />
-                <ol style={{ margin: '0px 12px', paddingLeft: 0 }}>
+                {/* Hide details on tablet and below */}
+                <ol className="hidden lg:block" style={{ margin: '0px 12px', paddingLeft: 0 }}>
                     {exp.details.map((item, i) => (
                     <li key={i}>{item}</li>
                     ))}
