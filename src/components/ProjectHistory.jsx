@@ -1,11 +1,10 @@
-
-
 import React from 'react';
 import { Fade, Slide } from 'react-awesome-reveal';
 
 const projectList = [
   {
     image: '/image-conv-logo.webp',
+    link: 'https://play.google.com/store/apps/details?id=id.haaweejee.imageconverter',
     title: 'Image Converter - JPG/WEBP/PNG',
     desc: 'A lightweight image format converter for mobile devices, allowing users to easily transform images into various common formats.',
     features: [
@@ -20,6 +19,7 @@ const projectList = [
   {
     image: '/uber-logo.svg',
     title: 'Urunan Bersama (Uber)',
+    link: '',
     desc: 'A crowdfunding platform that allows users to create and manage campaigns, enabling them to raise funds for various purposes.',
     features: [
       'Backend using Golang with Gin Framework, Database using PostgreSQL',
@@ -33,6 +33,7 @@ const projectList = [
   {
     image: '/jogja-pos.svg',
     title: 'Jogja Pos (Android)',
+    link: '',
     desc: 'A Point of Sale (POS) application for managing sales transactions, inventory, and customer data in retail environments.',
     features: [
       'Backend using Golang with Gin Framework, Database using PostgreSQL',,
@@ -59,7 +60,7 @@ const ProjectHistory = () => {
 
           {projectList.map((project, idx) => (
             <Fade duration={1000} delay={300}> 
-              <div className="flex md:flex-row flex-col gap-10 max-w-[1300px] items-stretch mt-8" >
+              <div className="flex md:flex-row flex-col gap-10 max-w-[1300px] items-stretch mt-8" key={idx}>
                   {/* Left Side */}
                   <div className="flex flex-col justify-start md:min-w-[400px] max-w[200px] relative">
                   <img
@@ -70,8 +71,18 @@ const ProjectHistory = () => {
                   </div>
                   <div className="flex-[1.5] bg-transparent text-white pt-8 flex flex-col justify-start">
                     <div className="flex items-center gap-3 mb-2 text-[#333]">
-                        <h2>{project.title}</h2>
+                        <h2 className='text-2xl font-semibold'>{project.title}</h2>
                     </div>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block text-[#2176bd] font-semibold underline hover:text-[#3498db] transition-colors mb-2"
+                      >
+                        View on Play Store
+                      </a>
+                    )}
                     <p className="text-[#666] my-4">{project.desc}</p>
                     <ul className="text-[#666] mb-6 pl-5">
                         {project.features.map((feature, i) => (
