@@ -5,28 +5,6 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 const projectList = [
   {
-    image: '/kompas.id-playstore.webp',
-    title: 'Kompas.id (Android)',
-    desc: 'A subscription-based news app by Harian Kompas offering ePaper, articles, eBooks, and text-to-speech features, accessible with an active subscription.',
-    features: [
-    ],
-    tech: [
-      'Kotlin', 'Android', 'MVVM', 'Clean Architecture',
-      'Jetpack Compose'
-    ]
-  },
-  {
-    image: '/dg-logo-playstore.webp',
-    title: 'Dunia Games (Android)',
-    desc: 'An application that serves as the largest gaming portal in Indonesia, featuring articles, community, short videos, tournaments, livestreams, and top-up services.',
-    features: [
-    ],
-    tech: [
-      'Kotlin', 'Java', 'Android', 'MVVM', 'Clean Architecture',
-      'Room', 'Jetpack Compose', 'DataStore', 'Modularization'
-    ]
-  },
-  {
     image: '/image-conv-logo.webp',
     title: 'Image Converter - JPG/WEBP/PNG',
     desc: 'A lightweight image format converter for mobile devices, allowing users to easily transform images into various common formats.',
