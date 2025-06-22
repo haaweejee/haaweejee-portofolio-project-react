@@ -61,7 +61,7 @@ const experiences = [
 
 const WorkExperience = () => (
   <section id='experience' className="mx-auto my-[200px] max-w-[1100px] px-4">
-    <Slide>
+    <Slide duration={1000}>
       <h2 className="text-[#3498db] md:text-2xl text-xl font-normal mb-0 max-w-[1100px] text-center">Experience</h2>
       <h1 className="md:text-3xl text-2xl font-bold m-0 max-w-[1100px] text-center text-[#333]">Work Experience</h1>
       <div className="w-[120px] h-1 bg-[#3498db] my-4 mx-auto rounded"></div>
