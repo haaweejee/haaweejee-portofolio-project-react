@@ -9,9 +9,6 @@ const projectList = [
     title: 'Kompas.id (Android)',
     desc: 'A subscription-based news app by Harian Kompas offering ePaper, articles, eBooks, and text-to-speech features, accessible with an active subscription.',
     features: [
-      'Increased unit test coverage from 0% to 40%',
-      'Designed and implemented Clean Architecture, replacing the previous Repository Pattern',
-      'Developed and implemented new features by slicing designs from Figma into code',
     ],
     tech: [
       'Kotlin', 'Android', 'MVVM', 'Clean Architecture',
@@ -23,7 +20,6 @@ const projectList = [
     title: 'Dunia Games (Android)',
     desc: 'An application that serves as the largest gaming portal in Indonesia, featuring articles, community, short videos, tournaments, livestreams, and top-up services.',
     features: [
-      'Migrate From MVP to MVVM, Xml View to Jetpack Compose',
     ],
     tech: [
       'Kotlin', 'Java', 'Android', 'MVVM', 'Clean Architecture',
