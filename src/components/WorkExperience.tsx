@@ -59,7 +59,7 @@ const experiences = [
   },
 ];
 
-const WorkExperience = () => (
+const WorkExperience : React.FC = () => (
   <section id='experience' className="mx-auto my-[200px] max-w-[1100px] px-4">
     <Slide duration={1000}>
       <h2 className="text-[#3498db] md:text-2xl text-xl font-normal mb-0 max-w-[1100px] text-center">Experience</h2>

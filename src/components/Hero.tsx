@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faUpwork, faMedium, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Hero = () => {
+const Hero : React.FC = () => {
   return (
     <section id="home">
       <div className="flex flex-row justify-center mt-32 items-center mx-auto">
@@ -31,7 +31,6 @@ const Hero = () => {
                 ],
                 autoStart: true,
                 loop: true,
-                pauseFor: 2000,
               }}
             />
           </h3>

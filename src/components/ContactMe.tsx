@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactMe = () => (
+const ContactMe : React.FC = () => (
   <section id='contact' className="py-[60px] pb-[80px] flex justify-center">
     <div className="max-w-[900px] mx-auto text-center">
       <img

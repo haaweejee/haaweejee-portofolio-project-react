@@ -46,7 +46,7 @@ const projectList = [
   },
 ];
 
-const ProjectHistory = () => {
+const ProjectHistory : React.FC = () => {
     return (
       <section id='projects' className="mx-auto my-[200px] max-w-[1100px] px-4">
           <Slide duration={1000}>
