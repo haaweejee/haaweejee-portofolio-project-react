@@ -2,7 +2,7 @@ import React from "react";
 import Typewriter from 'typewriter-effect';
 import { Link, Button } from "@heroui/react";
 import Marquee from "react-fast-marquee";
-import Skill from "./Skill"; // Assuming Skill component is in the same directory
+import Skill from "./widget/Skill"; // Assuming Skill component is in the same directory
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faNodeJs, faGoogle, faDocker, faGitAlt, faJs, faSwift, faPython, faGolang } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
@@ -59,17 +59,23 @@ const HeroUIHero: React.FC = () => {
           </Button>
       </div>
       </div>
-      <div className="flex flex-col mt-46 gap-5">
-        <div className="w-full h-1 bg-[#666]"></div>
-          <Marquee className="h-12" speed={50} direction="right">
-            {skillList.map((skill, index) => (
-                <Skill key={index} name={skill.name} logo={skill.logo} icon={skill.icon} />
-              ))}
-          </Marquee>
-          
-        <div className="w-full h-1 bg-[#666]"></div>
-      </div>
-    
+      <div className="relative w-full">
+          <div className="overflow-x-auto whitespace-nowrap">
+             <div className="flex flex-col mt-46 gap-5">
+                <div className="w-full h-1 bg-[#666]"></div>
+                  <Marquee className="h-12 z-0" speed={50} direction="right">
+                    {skillList.map((skill, index) => (
+                        <Skill key={index} name={skill.name} logo={skill.logo} icon={skill.icon} />
+                      ))}
+                  </Marquee>            
+                <div className="w-full h-1 bg-[#666]"></div>
+              </div>
+          </div>
+          {/* Fade left */}
+          <div className="pointer-events-none absolute left-0 top-0 h-full w-[400px] z-10 bg-gradient-to-r from-[#222] to-transparent"></div>
+          {/* Fade right */}
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-[400px] z-10 bg-gradient-to-l from-[#222] to-transparent"></div>
+      </div>    
     </div>
   );
 };

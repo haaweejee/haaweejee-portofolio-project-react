@@ -1,5 +1,6 @@
 import React from 'react';
 import { Fade, Slide } from 'react-awesome-reveal';
+import SectionTitle from './widget/SectionTitle';
 
 const projectList = [
   {
@@ -48,16 +49,8 @@ const projectList = [
 
 const ProjectHistory : React.FC = () => {
     return (
-      <section id='projects' className="mx-auto my-[200px] max-w-[1100px] px-4">
-          <Slide duration={1000}>
-             <h2 className="text-[#3498db] md:text-2xl text-xl font-normal mb-0 max-w-[1100px] text-center">Case Studies</h2>
-             <h1 className="md:text-3xl text-2xl font-bold m-0 max-w-[1100px] text-center text-[#333]">Project History</h1>
-             <div className="w-[120px] h-1 bg-[#3498db] my-4 mx-auto rounded"></div>
-          </Slide>
-          <Fade duration={1000} delay={300}>
-            <h3 className="text-xs m-0 font-normal text-[#666] mt-3">*Some of the projects in this history are owned by the companies where I have worked, while others are my personal projects. For company projects, they are not my property, but I contributed to their development.</h3>
-          </Fade>
-
+      <section id='projects' className="mx-auto mt-20 max-w-[1100px] px-4">
+          <SectionTitle title='Project History' subtitle='Case Studies' />
           {projectList.map((project, idx) => (
             <Fade duration={1000} delay={300}> 
               <div className="flex md:flex-row flex-col gap-10 max-w-[1300px] items-stretch mt-8" key={idx}>
@@ -70,7 +63,7 @@ const ProjectHistory : React.FC = () => {
                   />
                   </div>
                   <div className="flex-[1.5] bg-transparent text-white pt-8 flex flex-col justify-start">
-                    <div className="flex items-center gap-3 mb-2 text-[#333]">
+                    <div className="flex items-center gap-3 mb-2 text-[#fff]">
                         <h2 className='text-2xl font-semibold'>{project.title}</h2>
                     </div>
                     {project.link && (
@@ -83,8 +76,8 @@ const ProjectHistory : React.FC = () => {
                         View on Play Store
                       </a>
                     )}
-                    <p className="text-[#666] my-4">{project.desc}</p>
-                    <ul className="text-[#666] mb-6 pl-5">
+                    <p className="text-white opacity-70 my-4">{project.desc}</p>
+                    <ul className="text-white opacity-70 mb-6 pl-5">
                         {project.features.map((feature, i) => (
                         <li className='mb-2 list-disc' key={i}>{feature}</li>
                         ))}

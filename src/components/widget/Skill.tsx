@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faJs } from "@fortawesome/free-brands-svg-icons";
-import { SkillProps } from "../models/SkillProps";
+import { SkillProps } from "../../models/SkillProps";
 
 const Skill: React.FC<SkillProps> = ({ name, logo, icon }) => (
   <div className="flex items-center mr-8">

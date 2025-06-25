@@ -13,7 +13,7 @@ export const AcmeLogo = () => {
 
 const HeroUINavBar = () => {
   return (
-    <Navbar className="bg-[#333] shadow-md h-16 p-4" aria-label="ACME Navbar">
+    <Navbar className="bg-[#222] shadow-md h-16 p-4" aria-label="ACME Navbar">
       <NavbarBrand>
         <AcmeLogo />
       </NavbarBrand>

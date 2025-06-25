@@ -7,7 +7,7 @@ const ContactMe : React.FC = () => (
         src="/profile.jpg"
         alt="Profile"
         className="w-[150px] h-[150px] rounded-full object-cover mb-6 items-center justify-center mx-auto"/>
-      <p className="text-[1.2rem] mb-9 text-[#333] leading-[1.6]">
+      <p className="text-[1.2rem] mb-9 text-[#fff] leading-[1.6]">
             Android Developer with 3+ years of experience in mobile app development, specializing in building high-quality,
             scalable applications. Currently working at Salt Indonesia as an Android Developer, where I contributed to the
             development of the Dunia Games Android application by Telkomsel. Passionate about mobile development, with

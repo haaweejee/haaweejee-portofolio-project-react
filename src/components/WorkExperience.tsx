@@ -5,6 +5,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { Slide } from 'react-awesome-reveal';
+import SectionTitle from './widget/SectionTitle';
 
 const experiences = [
   {
@@ -60,45 +61,39 @@ const experiences = [
 ];
 
 const WorkExperience : React.FC = () => (
-  <section id='experience' className="mx-auto my-[200px] max-w-[1100px] px-4">
-    <Slide duration={1000}>
-      <h2 className="text-[#3498db] md:text-2xl text-xl font-normal mb-0 max-w-[1100px] text-center">Experience</h2>
-      <h1 className="md:text-3xl text-2xl font-bold m-0 max-w-[1100px] text-center text-[#333]">Work Experience</h1>
-      <div className="w-[120px] h-1 bg-[#3498db] my-4 mx-auto rounded"></div>
-    </Slide>
-    <VerticalTimeline
-      lineColor="#3498db">
-        {
-           experiences.map((exp, idx) => (
-                <VerticalTimelineElement
-                    key={exp.id + '-' + idx}
-                    className="vertical-timeline-element--work"
-                    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                    date={exp.date}
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    icon={<FontAwesomeIcon icon={faBriefcase} size="lg" />}
-                >
+  <section id='experience' className="mx-auto max-w-[1100px] px-4">
+      <SectionTitle title='Work Experience' subtitle='Experience' />
+      <VerticalTimeline>
+          {
+            experiences.map((exp, idx) => (
+                  <VerticalTimelineElement
+                      key={exp.id + '-' + idx}
+                      className="vertical-timeline-element--work"
+                      contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                      contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                      date={exp.date}
+                      iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                      icon={<FontAwesomeIcon icon={faBriefcase} size="lg" />}
+                  >
 
-                <h3 className="vertical-timeline-element-title">{exp.title}</h3>
-                <h4 className="vertical-timeline-element-subtitle">{exp.date}</h4>
-                <h4 className="vertical-timeline-element-subtitle">{exp.company}</h4>
+                  <h3 className="vertical-timeline-element-title">{exp.title}</h3>
+                  <h4 className="vertical-timeline-element-subtitle">{exp.company}</h4>
 
-                <img src={exp.logo} alt={exp.company} style={{ height: 20, margin: '12px 0' }} />
-                {/* Hide details on tablet and below */}
-                <ol className="hidden lg:block my-2 pl-4 list-disc text-white text-base">
-                    {exp.details.map((item, i) => (
-                      <li key={i} className="mb-2">
-                        {typeof item === 'string' && item.includes('<a')
-                          ? <span dangerouslySetInnerHTML={{ __html: item.replace('<a ', '<a style=\'font-weight:600;text-decoration:underline\' class=\'transition-colors\' ') }} />
-                          : item}
-                      </li>
-                    ))}
-                </ol>
-                </VerticalTimelineElement>
-            ))
-        }
-    </VerticalTimeline>
+                  <img src={exp.logo} alt={exp.company} style={{ height: 20, margin: '12px 0' }} />
+                  {/* Hide details on tablet and below */}
+                  <ol className="hidden lg:block my-2 pl-4 list-disc text-white text-base">
+                      {exp.details.map((item, i) => (
+                        <li key={i} className="mb-2">
+                          {typeof item === 'string' && item.includes('<a')
+                            ? <span dangerouslySetInnerHTML={{ __html: item.replace('<a ', '<a style=\'font-weight:600;text-decoration:underline\' class=\'transition-colors\' ') }} />
+                            : item}
+                        </li>
+                      ))}
+                  </ol>
+                  </VerticalTimelineElement>
+              ))
+          }
+      </VerticalTimeline>
   </section>
 );
 
