@@ -1,5 +1,6 @@
 
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
+import PrimaryButton from "./widget/PrimaryButton";
 
 export const AcmeLogo = () => {
   return (
@@ -36,9 +37,7 @@ const HeroUINavBar = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Button color="primary" variant="solid" className="bg-[#3498db] hover:bg-[#2176bd] transition-colors duration-500 rounded-[8px]">
-            <Link color="foreground" href="#contact"> Contact Me </Link>
-          </Button>
+          <PrimaryButton href="#contact" size="sm">Contact Me</PrimaryButton>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

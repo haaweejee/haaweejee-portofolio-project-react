@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SectionTitle from "../components/widget/SectionTitle";
 import {Chip} from "@heroui/react";
+import { Fade } from "react-awesome-reveal";
 
 
 const experiences = [
@@ -16,7 +17,7 @@ const experiences = [
             'Redesigned the app’s architecture by migrating from MVP to MVVM, switching UI from XML to Jetpack Compose, and converting Java code to Kotlin. This improved maintainability and reduced development time by 50%.',
 		],
         skill : [
-            'Kotlin', 'Android', 'Jetpack Compose', 'MVVM', 'Clean Architecture', 'Koin', 'Dagger 2', 'App Monitoring'
+            'Java','Kotlin', 'Shared Preferences', 'Android', 'Jetpack Compose', 'MVVM', 'Retrofit', 'MVP', 'Clean Architecture', 'Dagger 2', 'App Monitoring', 'Git', 'CI/CD', 'Agile', 'Unit Testing'
         ]
 	},
 	{
@@ -32,7 +33,7 @@ const experiences = [
             'Planned and implemented Clean Architecture, making the codebase easier to maintain and reducing bug-fixing time by 50%, with clear documentation for future development.',
 		],
          skill : [
-            'Kotlin', 'Android', 'Jetpack Compose', 'MVVM', 'Clean Architecture', 'Koin', 'Dagger 2', 'App Monitoring'
+            'Kotlin', 'Android', 'Jetpack Compose', 'Data Store','MVVM', 'Retrofit', 'Room', 'Clean Architecture', 'Dagger Hilt', 'App Monitoring', 'Git', 'CI/CD', 'Agile', 'Unit Testing'
         ]
 	},
 	{
@@ -48,7 +49,7 @@ const experiences = [
             'Collaborate with mentors and Bangkit team members to streamline the learning experience.'
 		],
          skill : [
-            'Kotlin', 'Android', 'Jetpack Compose', 'MVVM', 'Clean Architecture', 'Koin', 'Dagger 2', 'App Monitoring'
+            'Mentoring'
         ]
 	},
     {
@@ -63,7 +64,7 @@ const experiences = [
             'Conduct research to create new features or technologies that will be implemented in the Kompas.id application.',
 		],
          skill : [
-            'Kotlin', 'Android', 'Jetpack Compose', 'MVVM', 'Clean Architecture', 'Koin', 'Dagger 2', 'App Monitoring'
+            'Kotlin', 'Android', 'MVVM', 'Retrofit', 'Room', 'Git'
         ]
 	},
 ];
@@ -72,84 +73,86 @@ const HeroUIWorkExperience: React.FC = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<section id="experience" className="max-w-6xl mx-auto mt-20 py-12 px-4">
+		<section id="experience" className="max-w-6xl mx-auto mt-4 py-12 px-4">
 			<SectionTitle title="Work Experience" subtitle="Experience" />
-			<div className="flex gap-12 mt-12">
-				{/* Sidebar Company List */}
-				<div className="relative flex flex-col items-start pr-8 min-w-[180px]">
-					{experiences.map((exp, idx) => (
-						<button
-							key={exp.company}
-							onClick={() => setActiveIndex(idx)}
-							className={`relative text-left px-4 py-2 font-semibold transition-colors duration-200 w-full
-                            ${
-                                activeIndex === idx
-                                    ? "text-[#3498db] bg-[#f5f5fa]"
-                                    : "text-[#444]"
-                            }
-                        `}
-							style={{ zIndex: 20 }}
-						>
-							{activeIndex === idx && (
-								<div
-									className="absolute left-0 top-0 h-full w-1 bg-[#3498db]"
-									style={{ zIndex: 30 }}
-								/>
-							)}
-							{exp.company}
-						</button>
-					))}
-				</div>
-				{/* Main Content */}
-				<div className="flex-1">
-					<h2 className="text-3xl font-bold mb-2 text-white">
-						{experiences[activeIndex].role}{" "}
-						<a
-							href={experiences[activeIndex].companyUrl}
-							className="text-[#3498db] underline"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-                            <img className="my-4" src={experiences[activeIndex].logo} alt={experiences[activeIndex].company} style={{ height: 40 }} />
-						</a>
-					</h2>
-					<p className="text-white opacity-70 mb-4 font-semibold">
-						{experiences[activeIndex].date}
-					</p>
-					<ul className="space-y-4">
-						{experiences[activeIndex].details.map((item, i) => (
-							<li
-								key={i}
-								className="flex items-start gap-3 text-lg text-[#444]"
-							>
-								<span className="text-[#3498db] mt-1 text-2xl">&#10003;</span>
-								<span className="text-white opacity-70">
-                                    {typeof item === 'string' && item.includes('<a')
-                                    ? <span
-                                        dangerouslySetInnerHTML={{
-                                            __html: item.replace(
-                                            '<a ',
-                                            `<a style='font-weight:600;text-decoration:underline;' class='transition-colors hover:text-[#2176bd]' `
-                                            )
-                                        }}
-                                        />
-                                    : item}
-                                </span>
-							</li>
-						))}
-					</ul>
-                    <div className="mt-6 flex flex-wrap">
-                        {experiences[activeIndex].skill.map((item, i) => (
-                            <Chip
-                                key={i}
-                                className="mr-2 mb-2 bg-[#222] text-white border border-[#444] px-3 py-1 rounded-lg"
+            <Fade duration={1000} delay={300}>
+                <div className="flex gap-12 mt-12">
+                    {/* Sidebar Company List */}
+                    <div className="relative flex flex-col items-start pr-8 min-w-[180px]">
+                        {experiences.map((exp, idx) => (
+                            <button
+                                key={exp.company}
+                                onClick={() => setActiveIndex(idx)}
+                                className={`relative text-left px-4 py-2 font-semibold transition-colors duration-200 w-full
+                                ${
+                                    activeIndex === idx
+                                        ? "text-[#3498db] bg-[#f5f5fa]"
+                                        : "text-[#444]"
+                                }
+                            `}
+                                style={{ zIndex: 20 }}
                             >
-                                {item}
-                            </Chip>
+                                {activeIndex === idx && (
+                                    <div
+                                        className="absolute left-0 top-0 h-full w-1 bg-[#3498db]"
+                                        style={{ zIndex: 30 }}
+                                    />
+                                )}
+                                {exp.company}
+                            </button>
                         ))}
                     </div>
-				</div>
-			</div>
+                    {/* Main Content */}
+                    <div className="flex-1">
+                        <h2 className="text-3xl font-bold mb-2 text-white">
+                            {experiences[activeIndex].role}{" "}
+                            <a
+                                href={experiences[activeIndex].companyUrl}
+                                className="text-[#3498db] underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img className="my-4" src={experiences[activeIndex].logo} alt={experiences[activeIndex].company} style={{ height: 40 }} />
+                            </a>
+                        </h2>
+                        <p className="text-white opacity-70 mb-4 font-semibold">
+                            {experiences[activeIndex].date}
+                        </p>
+                        <ul className="space-y-4">
+                            {experiences[activeIndex].details.map((item, i) => (
+                                <li
+                                    key={i}
+                                    className="flex items-start gap-3 text-lg text-[#444]"
+                                >
+                                    <span className="text-[#3498db] mt-1 text-2xl">&#10003;</span>
+                                    <span className="text-white opacity-70">
+                                        {typeof item === 'string' && item.includes('<a')
+                                        ? <span
+                                            dangerouslySetInnerHTML={{
+                                                __html: item.replace(
+                                                '<a ',
+                                                `<a style='font-weight:600;text-decoration:underline;' class='transition-colors hover:text-[#2176bd]' `
+                                                )
+                                            }}
+                                            />
+                                        : item}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="mt-6 flex flex-wrap">
+                            {experiences[activeIndex].skill.map((item, i) => (
+                                <Chip
+                                    key={i}
+                                    className="mr-2 mb-2 bg-[#222] text-white border border-[#444] px-3 py-1 rounded-lg"
+                                >
+                                    {item}
+                                </Chip>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </Fade>
 		</section>
 	);
 };

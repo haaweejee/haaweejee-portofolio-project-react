@@ -1,12 +1,13 @@
 import React from "react";
-import Typewriter from 'typewriter-effect';
-import { Link, Button } from "@heroui/react";
-import Marquee from "react-fast-marquee";
-import Skill from "./widget/Skill"; // Assuming Skill component is in the same directory
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact, faNodeJs, faGoogle, faDocker, faGitAlt, faJs, faSwift, faPython, faGolang } from "@fortawesome/free-brands-svg-icons";
+import { faReact, faNodeJs, faGoogle, faDocker, faJs, faGolang } from "@fortawesome/free-brands-svg-icons";
 import { faDatabase } from "@fortawesome/free-solid-svg-icons";
-import { SkillProps } from "../models/SkillProps"; // Assuming SkillProps is defined in this path
+import { SkillProps } from "../models/SkillProps";
+import PrimaryButton from "./widget/PrimaryButton";
+import SecondaryButton from "./widget/SecondaryButton";
+import SkillsMarquee from "./widget/SkillsMarquee";
+import SocialLinks from "../components/moleculs/SocialLinks";
+import HeroIntro from "../components/moleculs/HeroIntro";
 
 
 const skillList: SkillProps[] = [
@@ -33,49 +34,28 @@ const skillList: SkillProps[] = [
 const HeroUIHero: React.FC = () => {
   return (
     <div className="flex flex-col h-screen text-white">
-      <div className="flex flex-col items-center justify-center text-center mt-24 mx-auto">
-        <h1 className="font-sans text-white text-4xl font-semibold mb-4">Hello<span >.</span></h1>
-        <h1 className="font-sans text-white text-5xl font-semibold mb-4"><span className="text-[#3498db]">I'am</span> Hendrawan Wibowo</h1>
-        <h1 className="font-sans text-white text-5xl font-bold">
-          <Typewriter
-                options={{
-                  strings: [
-                    'Software Engineer',
-                    'Android Developer',
-                    'Mobile Developer',
-                    'Full Stack Developer',
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-          />
-        </h1>
-        <div className="flex flex-row items-center mt-12 mx-28 gap-4">
-        <Button color="primary" variant="solid" className="bg-[#3498db] hover:bg-[#2176bd] transition-colors duration-500 rounded-[4px]">
-            <Link color="foreground" href="#contact" className="text-[20px] p-4"> Got Project? </Link>
-          </Button>
-          <Button color="primary" variant="solid" className="bg-[#333] border-[#fff] border-2 transition-colors duration-500 rounded-[4px]">
-            <Link color="foreground" href="#contact" className="text-[20px] p-4"> My Resume </Link>
-          </Button>
-      </div>
-      </div>
-      <div className="relative w-full">
-          <div className="overflow-x-auto whitespace-nowrap">
-             <div className="flex flex-col mt-46 gap-5">
-                <div className="w-full h-1 bg-[#666]"></div>
-                  <Marquee className="h-12 z-0" speed={50} direction="right">
-                    {skillList.map((skill, index) => (
-                        <Skill key={index} name={skill.name} logo={skill.logo} icon={skill.icon} />
-                      ))}
-                  </Marquee>            
-                <div className="w-full h-1 bg-[#666]"></div>
-              </div>
+      <div className="flex flex-row items-center justify-center mx-auto mt-24 gap-4">
+        <SocialLinks />
+        <div className="flex flex-col items-center justify-center text-center mx-auto">
+          <HeroIntro 
+              location="Tangerang, Banten, Indonesia"
+              name="Hendrawan Wibowo"
+              roles={[
+                'Software Engineer',
+                'Android Developer',
+                'Mobile Developer',
+                'Full Stack Developer',
+              ]}
+              greeting="Hello"
+              highlightColor="#3498db"
+            />
+          <div className="flex flex-row items-center mt-10 mx-28 gap-4">
+            <PrimaryButton href="#contact">Got Project?</PrimaryButton>
+            <SecondaryButton href="#contact">My Resume</SecondaryButton>
           </div>
-          {/* Fade left */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-[400px] z-10 bg-gradient-to-r from-[#222] to-transparent"></div>
-          {/* Fade right */}
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-[400px] z-10 bg-gradient-to-l from-[#222] to-transparent"></div>
-      </div>    
+        </div>
+      </div>
+      <SkillsMarquee skills={skillList} />
     </div>
   );
 };

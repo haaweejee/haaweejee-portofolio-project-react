@@ -11,6 +11,7 @@ import HeroUIHero from './components/HeroUIHero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import HeroUIWorkExperience from './components/HeroUIWorkExperience';
+import HeroUIContactMe from './components/HeroUIContactMe';
 
 const App: React.FC = () => {
   const [showTop, setShowTop] = useState(false);
@@ -28,7 +29,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen m-0 p-0 font-sans font-normal leading-[1.5] text-white bg-[#222] bg-no-repeat bg-top bg-cover">
+    <div className="min-h-screen m-0 p-0 font-sans font-normal leading-[1.5] text-white bg-[#222] bg-cover">
       {/* <Header /> */}
       <HeroUINavBar />
       <HeroUIHero />
@@ -36,7 +37,7 @@ const App: React.FC = () => {
       <HeroUIWorkExperience />
       <ProjectHistory />
       {/* <Articles /> */}
-      <ContactMe />
+      <HeroUIContactMe />
       <Footer />
       {showTop && (
         <button
