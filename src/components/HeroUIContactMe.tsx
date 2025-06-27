@@ -26,21 +26,21 @@ const HeroUIContactMe: React.FC = () => {
                         My <span className="text-[#3498db]">Skills</span>
                     </h1>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-3 max-w-[500px]">
-                        <SkillBox name="Kotlin" logo="/public/kotlin-original.svg" />
-                        <SkillBox name="Dart" logo="/public/dart-original.svg" />
-                        <SkillBox name="Java" logo="/public/java-original.svg" />
-                        <SkillBox name="TypeScript" logo="/public/typescript-plain.svg" />
+                        <SkillBox name="Kotlin" logo="/kotlin-original.svg" />
+                        <SkillBox name="Dart" logo="/dart-original.svg" />
+                        <SkillBox name="Java" logo="/java-original.svg" />
+                        <SkillBox name="TypeScript" logo="/typescript-plain.svg" />
                         <SkillBox name='Golang' icon={<FontAwesomeIcon icon={faGolang} className="text-blue-400" />} />
                         <SkillBox name="React" icon={<FontAwesomeIcon icon={faReact} className="text-blue-400" />} />
-                        <SkillBox name="Flutter" logo="/public/flutter-original.svg" />
+                        <SkillBox name="Flutter" logo="/flutter-original.svg" />
                         <SkillBox name="Node.js" icon={<FontAwesomeIcon icon={faNodeJs} className="text-green-400" />} />
                         <SkillBox name="Firebase" icon={<FontAwesomeIcon icon={faGoogle} className="text-yellow-400" />} />
                         <SkillBox name="Postgres" icon={<FontAwesomeIcon icon={faDatabase} className="text-blue-400" />} />
                         <SkillBox name="Docker" icon={<FontAwesomeIcon icon={faDocker} className="text-blue-400" />} />
                         <SkillBox name="Git" icon={<FontAwesomeIcon icon={faGitAlt} className="text-orange-500" />} />
                         <SkillBox name="GitHub" icon={<FontAwesomeIcon icon={faGithub} className="text-white" />} />
-                        <SkillBox name="Jetpack Compose" logo="/public/jetpack-compose.webp" />
-                        <SkillBox name="Android Studio" logo="/public/androidstudio-original.svg" />
+                        <SkillBox name="Jetpack Compose" logo="/jetpack-compose.webp" />
+                        <SkillBox name="Android Studio" logo="/androidstudio-original.svg" />
                     </div>
                 </div>
             </div>

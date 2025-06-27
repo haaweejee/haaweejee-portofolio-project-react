@@ -11,15 +11,15 @@ import HeroIntro from "../components/moleculs/HeroIntro";
 
 
 const skillList: SkillProps[] = [
-  { name: "Kotlin", logo: "/public/kotlin-original.svg" },
-  { name: "Dart", logo: "/public/dart-original.svg" },
-  { name: "Java", logo: "/public/java-original.svg" },
+  { name: "Kotlin", logo: "/kotlin-original.svg" },
+  { name: "Dart", logo: "/dart-original.svg" },
+  { name: "Java", logo: "/java-original.svg" },
   { name: "Go", icon: <FontAwesomeIcon icon={faGolang} /> },
   { name: "JavaScript", icon: <FontAwesomeIcon icon={faJs} /> },
-  { name: "TypeScript", logo: "/public/typescript-plain.svg" },
+  { name: "TypeScript", logo: "/typescript-plain.svg" },
   { name: "React", icon: <FontAwesomeIcon icon={faReact} /> },
-  { name: "Jetpack Compose", logo: "/public/jetpack-compose.webp" },
-  { name: "Flutter", logo: "/public/flutter-original.svg" },
+  { name: "Jetpack Compose", logo: "/jetpack-compose.webp" },
+  { name: "Flutter", logo: "/flutter-original.svg" },
   { name: "Node.js", icon: <FontAwesomeIcon icon={faNodeJs} className="text-green-400 text-4xl mr-3" /> },
   { name: "PostgreSQL", icon: <FontAwesomeIcon icon={faDatabase} className="text-blue-400 text-4xl mr-3" /> },
   { name: "Firebase", icon: <FontAwesomeIcon icon={faGoogle} className="text-yellow-400 text-4xl mr-3" /> },
@@ -27,8 +27,8 @@ const skillList: SkillProps[] = [
   { name: "Docker", icon: <FontAwesomeIcon icon={faDocker} className="text-blue-400 text-4xl mr-3" /> },
   { name: "CI/CD" },
   { name: "Agile" },
-  { name: "Android Studio", logo: "/public/androidstudio-original.svg" },
-  { name: "Github", logo: "/public/github-original.svg" },
+  { name: "Android Studio", logo: "/androidstudio-original.svg" },
+  { name: "Github", logo: "/github-original.svg" },
 ];
 
 const HeroUIHero: React.FC = () => {
