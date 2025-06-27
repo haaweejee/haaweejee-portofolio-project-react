@@ -5,9 +5,10 @@ interface PrimaryButtonProps {
   href: string;
   children: React.ReactNode;
   size?: "sm" | "md" | "lg";
+  className?: string;
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ href, children, size = "lg" }) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({ href, children, size = "lg", className = "" }) => {
   const sizeClasses = {
     sm: "text-[14px] px-3 py-2",
     md: "text-[16px] px-4 py-3",
@@ -18,7 +19,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ href, children, size = "l
     <Button
       color="primary"
       variant="solid"
-      className="bg-[#3498db] hover:bg-[#2176bd] transition-colors duration-500 rounded-[4px]"
+      className={`bg-[#3498db] hover:bg-[#2176bd] transition-colors duration-500 rounded-[4px] ${className}`}
     >
       <Link color="foreground" href={href} className={sizeClasses[size]}>
         {children}

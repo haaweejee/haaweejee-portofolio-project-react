@@ -29,7 +29,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen m-0 p-0 font-sans font-normal leading-[1.5] text-white bg-[#222] bg-cover">
+    <div className="min-h-screen m-0 p-0 bg-[#222]">
       {/* <Header /> */}
       <HeroUINavBar />
       <HeroUIHero />

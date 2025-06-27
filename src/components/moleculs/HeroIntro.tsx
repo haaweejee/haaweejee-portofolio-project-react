@@ -18,15 +18,15 @@ const HeroIntro: React.FC<HeroIntroProps> = ({
   highlightColor = "#3498db" 
 }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-center px-4">
       <LocationBadge location={location} />
-      <h1 className="font-sans text-white text-4xl font-semibold mb-4">
+      <h1 className="font-sans text-white text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 sm:mb-4">
         {greeting}<span>.</span>
       </h1>
-      <h1 className="font-sans text-white text-5xl font-semibold mb-4">
+      <h1 className="font-sans text-white text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 sm:mb-4">
         <span style={{ color: highlightColor }}>I'am</span> {name}
       </h1>
-      <h1 className="font-sans text-white text-5xl font-bold">
+      <h1 className="font-sans text-white text-3xl sm:text-4xl md:text-5xl font-bold min-h-[3rem] sm:min-h-[4rem] md:min-h-[5rem]">
         <Typewriter
           options={{
             strings: roles,

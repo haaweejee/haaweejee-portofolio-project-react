@@ -33,10 +33,16 @@ const skillList: SkillProps[] = [
 
 const HeroUIHero: React.FC = () => {
   return (
-    <div className="flex flex-col h-screen text-white">
-      <div className="flex flex-row items-center justify-center mx-auto mt-24 gap-4">
-        <SocialLinks />
-        <div className="flex flex-col items-center justify-center text-center mx-auto">
+    <div className="flex flex-col min-h-screen text-white px-4 sm:px-6 lg:px-8">
+      {/* Main Hero Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-center mx-auto mt-8 sm:mt-12 lg:mt-16 gap-4 lg:gap-8 max-w-7xl w-full">
+        {/* Social Links - Hidden on mobile, shown on desktop in vertical layout */}
+        <div className="hidden lg:block order-1 lg:order-none">
+          <SocialLinks orientation="vertical" size="2x" />
+        </div>
+        
+        {/* Main Content */}
+        <div className="flex flex-col items-center justify-center text-center order-2 lg:order-none">
           <HeroIntro 
               location="Tangerang, Banten, Indonesia"
               name="Hendrawan Wibowo"
@@ -49,13 +55,24 @@ const HeroUIHero: React.FC = () => {
               greeting="Hello"
               highlightColor="#3498db"
             />
-          <div className="flex flex-row items-center mt-10 mx-28 gap-4">
-            <PrimaryButton href="#contact">Got Project?</PrimaryButton>
-            <SecondaryButton href="#contact">My Resume</SecondaryButton>
+          
+          {/* Buttons - Responsive layout */}
+          <div className="flex flex-col sm:flex-row items-center mt-4 sm:mt-6 lg:mt-8 gap-4 w-full max-w-md">
+            <PrimaryButton href="#contact" className="w-full sm:w-auto min-w-[140px]">Got Project?</PrimaryButton>
+            <SecondaryButton href="#contact" className="w-full sm:w-auto min-w-[140px]">My Resume</SecondaryButton>
+          </div>
+          
+          {/* Social Links - Shown on mobile in horizontal layout */}
+          <div className="lg:hidden mt-4 sm:mt-6 order-3 lg:order-none">
+            <SocialLinks orientation="horizontal" size="2x" />
           </div>
         </div>
       </div>
-      <SkillsMarquee skills={skillList} />
+      
+      {/* Skills Marquee - Responsive spacing */}
+      <div className="mt-8 sm:mt-12 lg:mt-16">
+        <SkillsMarquee skills={skillList} />
+      </div>
     </div>
   );
 };

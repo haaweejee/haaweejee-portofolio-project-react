@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionTitle from './widget/SectionTitle';
 import PrimaryButton from './widget/PrimaryButton';
 import SkillBox from './widget/SkillBox';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,8 +17,8 @@ const HeroUIContactMe: React.FC = () => {
                         If you have a project in mind or just want to say hello, feel free to reach out. I&apos;m always open to discussing new opportunities and collaborations.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4"> 
-                        <PrimaryButton href='https://www.linkedin.com/in/haaweejee/'>Let&apos;s Connect</PrimaryButton>
-                        <PrimaryButton href='https://wa.me/6282217106768'> Let&apos;s Chat</PrimaryButton>
+                        <PrimaryButton className='text-white' href='https://www.linkedin.com/in/haaweejee/'>Let&apos;s Connect</PrimaryButton>
+                        <PrimaryButton className='text-white' href='https://wa.me/6282217106768'> Let&apos;s Chat</PrimaryButton>
                     </div>
                 </div>
                 <div className='flex flex-col flex-1'>
