@@ -59,7 +59,7 @@ const HeroUIHero: React.FC = () => {
           {/* Buttons - Responsive layout */}
           <div className="flex flex-col sm:flex-row items-center mt-4 sm:mt-6 lg:mt-8 gap-4 w-full max-w-md">
             <PrimaryButton href="#contact" className="w-full sm:w-auto min-w-[140px]">Got Project?</PrimaryButton>
-            <SecondaryButton href="#contact" className="w-full sm:w-auto min-w-[140px]">My Resume</SecondaryButton>
+            <SecondaryButton href="https://drive.google.com/file/d/1eb_LOQZ-Er1baGU5aNUDku4TFMViWdFH/view?usp=sharing" className="w-full sm:w-auto min-w-[140px]">My Resume</SecondaryButton>
           </div>
           
           {/* Social Links - Shown on mobile in horizontal layout */}
